@@ -1,2 +1,2 @@
 #! /bin/bash
-ls -R *sh
+ls -R *sh | sed 's/.$//' | sed 's/.$//'| sed 's/.$//'
