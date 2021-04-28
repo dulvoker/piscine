@@ -1,0 +1,2 @@
+#! /bin/bash
+find . -name 'a*' -print -o -name '*z' -print -o -name 'z*a!' -print
