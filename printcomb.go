@@ -9,8 +9,13 @@ func PrintComb() {
 				z01.PrintRune(rune(r))
 				z01.PrintRune(rune(i))
 				z01.PrintRune(rune(z))
+				if r == 55 && i == 56 && z == 57 {
+					z01.PrintRune('\n')
+				}
+				else {
 				z01.PrintRune(',')
 				z01.PrintRune(' ')
+				}
 			}
 		}
 	}
