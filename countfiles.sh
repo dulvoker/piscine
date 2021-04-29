@@ -1,2 +1,2 @@
 #! /bin/bash
-ls | wc -l
+find . -depth | wc -l
