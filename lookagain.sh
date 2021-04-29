@@ -1,4 +1,4 @@
 #! /bin/bash
-find . -name "*sh" | sed 's/^.//' | sed 's/^.//'| sed 's/.$//'| sed 's/.$//'| sed 's/.$//'
+ls -R *sh | sed 's/.$//'| sed 's/.$//'| sed 's/.$//'
 
 
