@@ -9,9 +9,9 @@ func PrintComb() {
 			z01.PrintRune(rune(i))
 			for z := r + 1; z < 58; z++ {
 				z01.PrintRune(rune(z))
-				z01.PrintRune(',')
-				z01.PrintRune(' ')
 			}
 		}
 	}
+	z01.PrintRune(',')
+	z01.PrintRune(' ')
 }
