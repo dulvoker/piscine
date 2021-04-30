@@ -2,7 +2,7 @@ package piscine
 
 import (
 	"fmt"
-	
+
 	piscine "github.com/01-edu/z01"
 )
 
