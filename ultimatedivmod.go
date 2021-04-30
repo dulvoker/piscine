@@ -6,3 +6,5 @@ func UltimateDivMod(a *int, b *int) {
 	*a = c / y
 	*b = c % y
 }
+
+
