@@ -10,8 +10,9 @@ func BasicAtoi(s string) int {
 				summa = summa * 10
 			}
 			z = z + 1
-			summa = ((sam[i] - '0') - 48 + summa)
+			numb = sam[i] - '0'
+			summa = numb - 48 + summa
 		}
 	}
-	return sum
+	return summa
 }
