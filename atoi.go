@@ -4,12 +4,12 @@ func Atoi(s string) int {
 	sam := []rune(s)
 	prev := 0
 	check := 0
-	checkplus := 0
+	checkminus := 0
 	for i := 0; i < len(s); i++ {
 		if sam[i] > 47 && sam[i] < 58 || sam[i] == 43 || sam[i] == 45 {
 			if sam[i] == 45 || sam[i] == 43 {
-				if sam[i] == 43 {
-					checkplus = 1
+				if sam[i] == 45 {
+					checkminus = 1
 				}
 				check = 1 + check
 				if check > 1 {
@@ -26,8 +26,8 @@ func Atoi(s string) int {
 			return 0
 		}
 	}
-	if checkplus == 1 {
-		return prev
+	if checkminus == 1 {
+		return -prev
 	}
-	return -prev
+	return prev
 }
