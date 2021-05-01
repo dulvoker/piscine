@@ -7,7 +7,7 @@ func BasicAtoi2(s string) int {
 		if sam[i] > 47 && sam[i] < 58 {
 			prev = prev * 10
 			prev = int(sam[i]) - 48 + prev
-		}
+		} else return 0
 	}
 	return prev
 }
