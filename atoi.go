@@ -6,6 +6,9 @@ func Atoi(s string) int {
 	check := 0
 	checkminus := 0
 	for i := 0; i < len(s); i++ {
+		if prev > 0 && sam[i] == 45 || sam[i] == 43 {
+			return 0
+		}
 		if sam[i] > 47 && sam[i] < 58 || sam[i] == 43 || sam[i] == 45 {
 			if sam[i] == 45 || sam[i] == 43 {
 				if sam[i] == 45 {
