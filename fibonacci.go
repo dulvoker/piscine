@@ -1,6 +1,6 @@
 package piscine
 
-func fibonacci(index int) int {
+func Fibonacci(index int) int {
 	if index < 0 {
 		return -1
 	} else if index == 0 {
@@ -10,6 +10,6 @@ func fibonacci(index int) int {
 	} else if index == 3 {
 		return 2
 	} else {
-		return fibonacci(index-1) + fibonacci(index-2)
+		return Fibonacci(index-1) + Fibonacci(index-2)
 	}
 }
