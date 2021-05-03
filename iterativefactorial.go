@@ -1,10 +1,12 @@
 package piscine
 
 func IterativeFactorial(nb int) int {
+	sum := 1
 	if nb > 1 {
-		return nb * IterativeFactorial(nb-1)
-	} else if nb == 1 || nb == 0 {
-		return 1
+		for i := 1; i <= nb; i++ {
+			sum = sum * i
+		}
+		return sum
 	} else {
 		return 0
 	}
