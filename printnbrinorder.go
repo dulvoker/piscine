@@ -18,6 +18,6 @@ func PrintNbrInOrder(n int) {
 		}
 	}
 	for i := 0; i < len; i++ {
-		z01.PrintRune(table[i])
+		PrintRune(table[i])
 	}
 }
