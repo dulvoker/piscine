@@ -1,5 +1,7 @@
 package piscine
 
+import "github.com/01-edu/z01"
+
 func PrintNbrInOrder(n int) {
 	var table []rune
 	for i := 0; ; i++ {
@@ -18,6 +20,6 @@ func PrintNbrInOrder(n int) {
 		}
 	}
 	for i := 0; i < len; i++ {
-		PrintRune(table[i])
+		z01.PrintRune(table[i])
 	}
 }
