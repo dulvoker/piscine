@@ -1,4 +1,4 @@
-package main
+package piscine
 
 func Capitalize(s string) string {
 	casted := []rune(s)
