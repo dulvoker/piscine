@@ -9,8 +9,7 @@ import (
 func main() {
 	prog_name := os.Args[0]
 	prog_name = string(prog_name)
-	casted := []rune(prog_name)
-	for i := 2; i < len(prog_name); i++ {
-		z01.PrintRune(casted[i])
+	for _, word := range prog_name[2:] {
+		z01.PrintRune(word)
 	}
 }
