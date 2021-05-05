@@ -8,7 +8,8 @@ import (
 
 func main() {
 	prog_name := string(os.Args[0])
-	for _, word := range prog_name[2:] {
+	prog := []rune(prog_name)
+	for _, word := range prog[2:] {
 		z01.PrintRune(word)
 	}
 }
