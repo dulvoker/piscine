@@ -7,5 +7,8 @@ import (
 
 func main() {
 	prog_name := os.Args[0]
-	fmt.Printf("%s", prog_name)
+	casted := []rune(prog_name)
+	for i := 0; i < len(prog_name); i++ {
+		z01.PrintRune(rune(casted[i]))
+	}
 }
