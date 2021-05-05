@@ -5,8 +5,9 @@ func Join(strs []string, sep string) string {
 	for index, word := range strs {
 		if index == len(strs)-1 {
 			chetam = chetam + word
+		} else {
+			chetam = chetam + word + sep
 		}
-		chetam = chetam + word + sep
 	}
 	return chetam
 }
