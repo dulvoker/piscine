@@ -12,4 +12,5 @@ func main() {
 	for _, word := range prog[2:] {
 		z01.PrintRune(word)
 	}
+	z01.PrintRune('\n')
 }
