@@ -1,4 +1,4 @@
-package piscine
+package main
 
 func Capitalize(s string) string {
 	casted := []rune(s)
@@ -9,15 +9,15 @@ func Capitalize(s string) string {
 				if casted[i] > 96 {
 					casted[i] = casted[i] - 32
 				}
-				i++
 				check1 = 1
+				continue
 			}
 			if check1 == 1 {
 				if casted[i] < 91 {
 					casted[i] = casted[i] + 32
 				}
 			}
-		} else {
+		} else if casted[i] < 47 || casted[i] > 57 {
 			check1 = 0
 		}
 	}
