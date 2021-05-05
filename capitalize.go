@@ -14,7 +14,7 @@ func Capitalize(s string) string {
 			}
 			if check1 == 1 {
 				if casted[i] < 91 {
-					casted[i] = casted[i] - 32
+					casted[i] = casted[i] + 32
 				}
 			}
 		} else {
