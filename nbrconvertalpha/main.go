@@ -15,7 +15,7 @@ func calc(s string) rune {
 			prev = int(sam[i]) - 48 + prev
 		}
 	}
-	if prev < 0 || prev > 25 {
+	if prev <= 0 || prev > 25 {
 		return rune(32)
 	}
 	return rune(prev + 48 + 48)
