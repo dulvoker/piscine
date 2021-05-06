@@ -42,10 +42,11 @@ func main() {
 		for _, word := range os.Args[2:] {
 			z01.PrintRune(upper(word))
 		}
+		z01.PrintRune('\n')
 	} else {
 		for _, word := range os.Args[1:] {
 			z01.PrintRune(calc(word))
 		}
+		z01.PrintRune('\n')
 	}
-	z01.PrintRune('\n')
 }
