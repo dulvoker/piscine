@@ -25,7 +25,7 @@ func Index2(s string, toFind string) []int {
 	return coords
 }
 
-func Split(s, sep string) {
+func Split(s, sep string) []string {
 	numbers := Index2(s, sep)
 	var newstring []string
 	word := ""
@@ -40,4 +40,5 @@ func Split(s, sep string) {
 		q = temp + len(sep)
 	}
 	newstring = append(newstring, word[q:])
+	return newstring
 }
