@@ -20,7 +20,7 @@ func Atoi(s string) int {
 				}
 			}
 			if sam[i] == 43 || sam[i] == 45 {
-				prev = prev
+				prev = prev * 1
 			} else {
 				prev = prev * 10
 				prev = int(sam[i]) - 48 + prev
