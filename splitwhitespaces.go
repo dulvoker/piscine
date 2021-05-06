@@ -6,8 +6,7 @@ func SplitWhiteSpaces(s string) []string {
 	for i, char := range s {
 		if i == len(s)-1 {
 			words = append(words, word+string(char))
-		}
-		if char != rune(32) && char != rune(9) && char != rune(10) {
+		} else if char != rune(32) && char != rune(9) && char != rune(10) {
 			word = word + string(char)
 		} else {
 			if word != "" {
