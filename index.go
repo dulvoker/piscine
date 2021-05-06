@@ -4,10 +4,15 @@ func Index(s string, toFind string) int {
 	castedone := []rune(s)
 	castedsub := []rune(toFind)
 	coord := 0
-	for i := 0; i < len(s); i++ {
+	z := len(s)
+	q := len(toFind)
+	if q == 0 {
+		return 0
+	}
+	for i := 0; i < z; i++ {
 		if castedone[i] == castedsub[coord] {
 			coord = coord + 1
-			if coord == len(castedsub) {
+			if coord == q {
 				return (i - coord + 1)
 			}
 		}
