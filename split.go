@@ -1,8 +1,6 @@
 package piscine
 
-import "fmt"
-
-func Index(s string, toFind string) []int {
+func Index2(s string, toFind string) []int {
 	castedone := []rune(s)
 	castedsub := []rune(toFind)
 	coord := 0
@@ -28,8 +26,7 @@ func Index(s string, toFind string) []int {
 }
 
 func Split(s, sep string) {
-	numbers := Index(s, sep)
-	fmt.Println(numbers)
+	numbers := Index2(s, sep)
 	var newstring []string
 	word := ""
 	for _, char := range s {
