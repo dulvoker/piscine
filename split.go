@@ -14,7 +14,7 @@ func Index2(s string, toFind string) []int {
 		if castedone[i] == castedsub[coord] {
 			coord = coord + 1
 			if coord == q {
-				coords = append(coords, i-1)
+				coords = append(coords, i-q+1)
 				coord = 0
 			}
 		}
