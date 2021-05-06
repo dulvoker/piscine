@@ -9,9 +9,7 @@ import (
 func calc(s string) int {
 	casted := []rune(s)
 	sum := 0
-	for _, char := range casted {
-		sum = sum + int(char)
-	}
+	sum = int(casted[0])
 	return sum
 }
 
