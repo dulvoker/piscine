@@ -10,8 +10,10 @@ func SplitWhiteSpaces(s string) []string {
 		if char != rune(32) && char != rune(9) && char != rune(10) {
 			word = word + string(char)
 		} else {
-			words = append(words, word)
-			word = ""
+			if word != "" {
+				words = append(words, word)
+				word = ""
+			}
 		}
 	}
 	return words
