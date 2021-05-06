@@ -46,4 +46,5 @@ func main() {
 			z01.PrintRune(calc(word))
 		}
 	}
+	z01.PrintRune('\n')
 }
