@@ -12,11 +12,10 @@ func main() {
 		fmt.Println("Too many arguments")
 	} else {
 		file, err := os.Open(os.Args[1])
-		fmt.Println(os.Args[1])
 		if err != nil {
 			fmt.Println("File name missing")
 		}
-		arr := make([]byte, 100)
+		arr := make([]byte, 15)
 		file.Read(arr)
 		fmt.Println(string(arr))
 	}
