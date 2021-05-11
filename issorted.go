@@ -8,7 +8,8 @@ func IsSorted(f func(a, b int) int, a []int) bool {
 	for i, each := range a {
 		if i == len(a)-2 {
 			break
-		} else if f(each, a[i+1]) != f(a[i+1], a[i+2]) {
+		}
+		if f(each, a[i+1])*f(a[i+1], a[i+2]) < 0 {
 			return false
 		}
 	}
