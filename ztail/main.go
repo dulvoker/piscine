@@ -4,8 +4,6 @@ import (
 	"fmt"
 	"io"
 	"os"
-
-	"github.com/01-edu/z01"
 )
 
 func TrimAtoi(s string) int {
@@ -45,7 +43,6 @@ func open_and_read(s string, how_much int) string {
 	file, err := os.Open(s)
 	if err != nil {
 		fmt.Printf("open %v: no such file or directory\n", s)
-		z01.PrintRune('\n')
 		return ""
 	}
 	sad, _ := file.Stat()
@@ -68,12 +65,15 @@ func main() {
 			if len(os.Args) > 4 {
 				to_introduce = true
 			}
-			for _, each := range os.Args[3:] {
+			for i, each := range os.Args[3:] {
 				if open_and_read(each, number) == "" {
 					errors++
 				} else {
+					if i != 0 {
+						fmt.Printf("\n")
+					}
 					if to_introduce == true {
-						fmt.Printf("==> %v <==", each)
+						fmt.Printf("==> %v <==\n", each)
 					}
 					fmt.Printf("%v", open_and_read(each, number))
 				}
@@ -87,5 +87,4 @@ func main() {
 			}
 		}
 	}
-
 }
