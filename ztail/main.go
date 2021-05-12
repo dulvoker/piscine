@@ -85,7 +85,6 @@ func main() {
 				}
 			}
 			if errors > 0 {
-				fmt.Printf("\n")
 				os.Exit(1)
 			}
 		}
