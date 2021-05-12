@@ -46,10 +46,16 @@ func open_and_read(s string, how_much int) string {
 	}
 	sad, _ := file.Stat()
 	arr := make([]byte, sad.Size())
+	if sad.Size() > int64(how_much) {
+		file.Read(arr)
+		new_array := make([]byte, how_much)
+		new_array = arr[sad.Size()-int64(how_much):]
+		ret_array := string(new_array)
+		file.Close()
+		return ret_array
+	}
 	file.Read(arr)
-	new_array := make([]byte, how_much)
-	new_array = arr[sad.Size()-int64(how_much):]
-	ret_array := string(new_array)
+	ret_array := string(arr)
 	file.Close()
 	return ret_array
 }
@@ -77,7 +83,8 @@ func main() {
 					fmt.Printf("%v", open_and_read(each, number))
 				}
 			}
-			if errors > 1 {
+			if errors > 0 {
+				fmt.Printf("\n")
 				os.Exit(1)
 			}
 		}
