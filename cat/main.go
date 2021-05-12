@@ -28,10 +28,6 @@ func open_and_read(s string) bool {
 	return true
 }
 
-func input_output() {
-
-}
-
 func main() {
 	if len(os.Args) > 1 {
 		for _, each := range os.Args[1:] {
