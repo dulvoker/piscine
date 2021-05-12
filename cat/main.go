@@ -35,7 +35,6 @@ func main() {
 				os.Exit(1)
 			}
 		}
-		z01.PrintRune('\n')
 	} else {
 		if _, err := io.Copy(os.Stdout, os.Stdin); err != nil {
 			panic(err)
