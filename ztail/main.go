@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"io"
 	"os"
 )
 
@@ -80,10 +79,6 @@ func main() {
 			}
 			if errors > 1 {
 				os.Exit(1)
-			}
-		} else {
-			if _, err := io.Copy(os.Stdout, os.Stdin); err != nil {
-				panic(err)
 			}
 		}
 	}
