@@ -41,7 +41,8 @@ func TrimAtoi(s string) int {
 func open_and_read(s string, how_much int) string {
 	file, err := os.Open(s)
 	if err != nil {
-		fmt.Printf("open %v: no such file or directory\n", s)
+		fmt.Printf("open %v: no such file or directory", s)
+		fmt.Printf("\n")
 		return ""
 	}
 	sad, _ := file.Stat()
