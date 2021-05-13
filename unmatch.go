@@ -9,7 +9,7 @@ func Unmatch(a []int) int {
 				check++
 			}
 		}
-		if check%2 != 0 {
+		if check%2 == 0 {
 			return a[i]
 		}
 	}
