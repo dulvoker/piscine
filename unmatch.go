@@ -1,17 +1,16 @@
 package piscine
 
 func Unmatch(a []int) int {
-	firstnumb := a[0]
-	var pattern []int
-	for i, numb := range a {
-		if i != 0 && numb == firstnumb {
-			break
+	check := 0
+	for i := 0; i < len(a); i++ {
+		check = 0
+		for q := 0; q < len(a); q++ {
+			if a[i] == a[q] && q != i {
+				check = 1
+			}
 		}
-		pattern = append(pattern, numb)
-	}
-	for i, numb := range a {
-		if pattern[i%len(pattern)] != numb {
-			return numb
+		if check == 0 {
+			return a[i]
 		}
 	}
 	return -1
