@@ -1,4 +1,4 @@
-package main
+package piscine
 
 func Compact(ptr *[]string) int {
 	sum := 0
