@@ -2,9 +2,11 @@ package piscine
 
 func ListSize(l *List) int {
 	q := 0
-	for l.Head != l.Tail {
+	var lis *NodeL
+	lis = l.Head
+	for lis != nil {
 		q++
-		l.Head = l.Head.Next
+		lis = lis.Next
 	}
 	return q
 }
