@@ -1,19 +1,17 @@
 package piscine
 
 func ListRemoveIf(l *List, data_ref interface{}) {
+	var table []*NodeL
 	var lis *NodeL
-	if ListSize(l) == 1 {
-		ListClear(l)
-	}
 	lis = l.Head
 	for lis != nil {
-		if CompStr(lis.Next.Data, data_ref) {
-			if lis.Next.Next != nil {
-				lis.Next = lis.Next.Next
-			} else {
-				lis.Next = nil
-			}
+		if lis.Data != data_ref {
+			table = append(table, lis)
 		}
 		lis = lis.Next
+	}
+	ListClear(l)
+	for _, each := range table {
+		ListPushBack(l, each.Data)
 	}
 }
