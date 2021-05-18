@@ -4,7 +4,7 @@ func SortTable(table []int) {
 	len := len(table)
 	for i := 0; i < len-1; i++ {
 		for j := 0; j < len-i-1; j++ {
-			if table[j] < table[j+1] {
+			if table[j] > table[j+1] {
 				table[j], table[j+1] = table[j+1], table[j]
 			}
 		}
@@ -40,8 +40,8 @@ func ListSort(l *NodeI) *NodeI {
 	}
 	SortTable(table)
 	lis = nil
-	for _, each := range table {
-		lis = listPushBack(lis, each)
+	for i := 0; i < len(table); i++ {
+		lis = listPushBack(lis, table[len(table)-1-i])
 	}
 	return l
 }
