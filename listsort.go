@@ -40,8 +40,8 @@ func ListSort(l *NodeI) *NodeI {
 	}
 	SortTable(table)
 	lis = nil
-	for i := 0; i < len(table); i++ {
-		lis = listPushBack(lis, table[len(table)-1-i])
+	for _, each := range table {
+		lis = listPushBack(lis, each)
 	}
-	return l
+	return lis
 }
