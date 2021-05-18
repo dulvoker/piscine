@@ -5,6 +5,11 @@ type NodeI struct {
 	Next *NodeI
 }
 
+func NodePushBack(l *NodeI, data int) {
+	node := &NodeI{Data: data}
+	l.Next = node
+}
+
 func ListSort(l *NodeI) *NodeI {
 	var table []int
 	var lis *NodeI
@@ -14,9 +19,9 @@ func ListSort(l *NodeI) *NodeI {
 		lis = lis.Next
 	}
 	SortIntegerTable(table)
-	l = nil
-	for _, each := range table {
-		l.Data = each
+	l.Data = table[0]
+	for _, each := range table[1:] {
+		NodePushBack(l, each)
 		l = l.Next
 	}
 	return l
