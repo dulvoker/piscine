@@ -11,6 +11,7 @@ func fapply(root *TreeNode, level int, f func(...interface{}) (int, error)) {
 		fapply(root.Right, level-1, f)
 	}
 }
+
 func BTreeApplyByLevel(root *TreeNode, f func(...interface{}) (int, error)) {
 	if root != nil {
 		a := BTreeLevelCount(root)
